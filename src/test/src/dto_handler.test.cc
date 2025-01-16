@@ -2,7 +2,7 @@
 #include <dto_handler/dto_handler.hh>
 #include <nael_utils/json/json_handler.hh>
 
-TEST(dto_handler, eq_true)
+TEST(dto_handler, dto_to_bo)
 {
 	//Import dto
 	dto::DtoContext dto_context;
@@ -95,3 +95,22 @@ TEST(dto_handler, eq_true)
     EXPECT_EQ(second_val_2p3_2.get_const_first().get_value(), 8);
 }
 
+TEST(dto_handler, consistency)
+{
+	//Import inconsistent dto (duplicate key)
+	dto::DtoContext dto_context;
+    const char* content =
+        "{"
+            "\"first_collec\": ["
+                "{\"id\":\"first_val_2\", \"value\": 2},"
+                "{\"id\":\"first_val_2\", \"value\": 10}"
+            "],"
+            "\"second_collec\": []"
+        "}";
+    std::istringstream iss(content);
+	json::import_from_stream(iss, dto_context);
+
+    bo::BoContext bo_context;
+    ASSERT_THROW( dto_handler::dto_to_bo(dto_context, bo_context), bo::consistency );
+
+}

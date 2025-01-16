@@ -1,12 +1,19 @@
 #pragma once
 
 #include <nael_utils/model/model_desc.hh>
+#include <nael_utils/exception/exception.hh>
 
 #include "FirstClass.hh"
 #include "SecondClass.hh"
 
+
 namespace bo
 {
+
+/**
+ * @brief Dedicated exception for consistency
+ */
+MAKE_EXCEPTION(consistency)
 
 class BoContext
 {

@@ -4,6 +4,7 @@
 
 namespace dto_handler
 {
+
     /**
      * @brief Fill a bo context
      * @param dto_context the dto to read from
