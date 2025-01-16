@@ -12,7 +12,7 @@ public:
     FirstClass(std::string const &id, unsigned value);
 
 //Basic attributes
-    MAKE_CLASS_ATT(
+    MAKE_CLASS_ATT( // LCOV_EXCL_LINE
         ( ( std::string)(id) ),
         ( ( unsigned)(value)(0) )
     )

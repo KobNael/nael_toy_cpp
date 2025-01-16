@@ -8,13 +8,13 @@
 namespace dto
 {
 
-MAKE_DTO_STRUCT(
+MAKE_DTO_STRUCT( // LCOV_EXCL_LINE
     FirstClassDto,
     ((std::string)(id)) // identifier
     ((unsigned)(value)) // identifier
 )
 
-MAKE_DTO_STRUCT(
+MAKE_DTO_STRUCT( // LCOV_EXCL_LINE
     SecondClassDto,
     ((std::string)(id)) // identifier
     ((std::string)(first_id)) // identifier
@@ -22,7 +22,7 @@ MAKE_DTO_STRUCT(
 )
 
 //Full context
-MAKE_DTO_STRUCT(
+MAKE_DTO_STRUCT( // LCOV_EXCL_LINE
     DtoContext,
     ((std::vector<FirstClassDto>)(first_collec))
     ((std::vector<SecondClassDto>)(second_collec))
