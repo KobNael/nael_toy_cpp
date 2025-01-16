@@ -5,7 +5,7 @@ namespace bo
 
 FirstClass &BoContext::addFirstClass(std::string const &id, unsigned value)
 {
-    auto [iter, inserted] = _firsts.try_emplace( id, FirstClass(id, value));
+    auto [iter, inserted] = _firsts.try_emplace(id, id, value);
     if(!inserted)
     {
         throw std::logic_error("An item with the same id already exists");
@@ -19,7 +19,7 @@ SecondClass &BoContext::addSecondClass(std::string const &id, std::string const 
     {
         throw std::logic_error("Unknown first item " + first_id);
     }
-    auto [iter, inserted] = _seconds.try_emplace(id, SecondClass(id, value, first->second));
+    auto [iter, inserted] = _seconds.try_emplace(id, id, value, first->second);
     if(!inserted)
     {
         throw std::logic_error("An item with the same id already exists");
