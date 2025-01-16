@@ -100,7 +100,7 @@ endif ()
 # ============================================================================
 
 if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
-    set (CMAKE_INSTALL_PREFIX ${PROJECT_BINARY_DIR}/install/${PROJECT_NAME}-${PROJECT_VERSION} CACHE PATH "${PROJECT_NAME} default install path" FORCE)
+    set (CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install/${PROJECT_NAME}-${PROJECT_VERSION} CACHE PATH "${PROJECT_NAME} default install path" FORCE)
 endif ()
 
 set (ConfigPackageLocation "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}-${PROJECT_VERSION}")

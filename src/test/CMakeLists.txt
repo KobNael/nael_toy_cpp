@@ -4,12 +4,15 @@ include (unit_tests)
 target_sources (unit_tests
     PRIVATE
     src/simple.test.cc
+    src/dto_handler.test.cc
     )
 
 target_link_libraries (unit_tests
     PRIVATE
         GTest::gtest_main
+        lib_toy_cpp
     )
+
 
 target_include_directories (unit_tests
     PUBLIC

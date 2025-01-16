@@ -1,9 +1,7 @@
 #include <boost/program_options.hpp>
 #include <iostream>
 
-#include "dto/In.hh"
-#include "bo/In.hh"
-#include "dto_handler/dto_handler.hh"
+#include <dto_handler/dto_handler.hh>
 #include <nael_utils/json/json_handler.hh>
 
 namespace po = boost::program_options;
@@ -24,25 +22,18 @@ int processArgs(po::variables_map const &vm)
 	if( vm.count("input-file") )
 	{
 		//Import dto
-	    dto::DtoContext *dto_context = new dto::DtoContext();
+	    dto::DtoContext dto_context;
 		INFOLOG << "Import " << vm["input-file"].as< std::string >() << std::endl;
-		json::import_from_file(vm["input-file"].as< std::string >(), *dto_context);
-		DBUGLOG << "Got " << *dto_context << std::endl;
+		json::import_from_file(vm["input-file"].as< std::string >(), dto_context);
+		DBUGLOG << "Got " << dto_context << std::endl;
 		//convert dto to bo
-		bo::BoContext *bo_context = new bo::BoContext();
-		dto_handler::dto_to_bo(*dto_context, *bo_context);
-		//Test print
-		for(dto::MoldDto const &p : dto_context->molds)
-		{
-			INFOLOG << p << std::endl;
-		}
+		bo::BoContext bo_context;
+		dto_handler::dto_to_bo(dto_context, bo_context);
 		//export dto to file
 		if( vm.count("output-file") )
 		{
-			json::export_to_file(vm["output-file"].as< std::string >(), *dto_context);
+			json::export_to_file(vm["output-file"].as< std::string >(), dto_context);
 		}
-		delete dto_context;
-		delete bo_context;
 	}
 
 	return exitAndReturn(0);
