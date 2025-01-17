@@ -5,6 +5,7 @@
 
 #include <nael_utils/model/model_desc.hh>
 
+// @start_generated
 namespace dto
 {
 
@@ -29,3 +30,4 @@ MAKE_DTO_STRUCT(
 )
 
 }
+// @end_generated
