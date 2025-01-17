@@ -15,5 +15,5 @@ jobs:
   cpp_pipeline:
     uses: KobNael/nael_cpp_action/.github/workflows/cpp-workflow.yml@dev
     secrets: inherit
-    with:
-      CHECK_QUALITY_GATE: false
+#    with:
+#      CHECK_QUALITY_GATE: false
