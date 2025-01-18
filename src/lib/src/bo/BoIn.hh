@@ -13,7 +13,7 @@ namespace bo
 /**
  * @brief Dedicated exception for consistency
  */
-MAKE_EXCEPTION(consistency) // LCOV_EXCL_LINE
+MAKE_EXCEPTION(consistency)
 
 class BoContext
 {
@@ -24,8 +24,8 @@ public:
     SecondClass &addSecondClass(std::string const &id, std::string const &first_id, double value);
 
 //Attributes
-    MAKE_UNORDERED_MAP(std::string, FirstClass, firsts) // LCOV_EXCL_LINE
-    MAKE_MAP(std::string, SecondClass, seconds) // LCOV_EXCL_LINE
+    MAKE_STRHASH_MAP(FirstClass, firsts)
+    MAKE_MAP(std::string, SecondClass, seconds)
 };
 
 

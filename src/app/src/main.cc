@@ -7,7 +7,6 @@
 namespace po = boost::program_options;
 
 int exitAndReturn(int retCode){
-	io::ClearLogger();
 	//Return
 	return retCode;
 }
@@ -16,7 +15,7 @@ int processArgs(po::variables_map const &vm)
 {
 	if( vm.count("debug") )
 	{
-		io::SetLogLevel(io::DEBUG_LVL);
+		io::LoggerManager::SetLogLevel(io::LogLevel::DEBUG);
 	}
 	//input
 	if( vm.count("input-file") )
@@ -43,7 +42,6 @@ int main(int argc, char* argv[])
 {
 	std::ostringstream usage;
 	try {
-		io::CreateLogger("app.log");
 		po::options_description desc("Available options");
 		desc.add_options()
 			("help,h", "Print this message")
