@@ -15,8 +15,8 @@ jobs:
   cpp_pipeline:
     uses: KobNael/nael_cpp_action/.github/workflows/cpp-workflow.yml@dev
     with:
-#      CHECK_QUALITY_GATE: false
       RUN_SONAR: false
+      CHECK_QUALITY_GATE: false
     secrets:
       GH_PAT: "${{ secrets.GH_PAT }}"
       SONAR_TOKEN: "${{ secrets.SONAR_TOKEN }}"
