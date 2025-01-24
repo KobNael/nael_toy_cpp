@@ -10,11 +10,6 @@
 namespace bo
 {
 
-/**
- * @brief Dedicated exception for consistency
- */
-MAKE_EXCEPTION(consistency)
-
 class BoContext
 {
 public:
