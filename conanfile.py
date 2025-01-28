@@ -99,7 +99,7 @@ class libreflectConan(ConanFile):
         self.requires("boost/1.86.0", transitive_headers=True)
         self.requires("gtest/1.15.0", transitive_headers=True)
         if self.settings.os == "Windows":
-            self.requires("mingw-builds/12.2.0")
+            self.requires("mingw-builds/14.2.0")
 
     def package_id(self):
         self.info.clear()
