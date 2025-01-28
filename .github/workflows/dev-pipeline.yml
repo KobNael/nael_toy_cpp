@@ -13,7 +13,7 @@ on:
 jobs:
   # Call pipeline
   cpp_pipeline:
-    uses: KobNael/nael_cpp_action/.github/workflows/cpp-workflow.yml@dev
+    uses: KobNael/nael_cpp_action/.github/workflows/cpp-workflow.yml@win_compil
     with:
       RUN_SONAR: false
       CHECK_QUALITY_GATE: false
