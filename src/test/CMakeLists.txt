@@ -4,6 +4,7 @@ include (unit_tests)
 target_sources (unit_tests
     PRIVATE
     src/simple.test.cc
+    src/basic.test.cc
     )
 
 ##########################
