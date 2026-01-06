@@ -27,7 +27,7 @@ include (GNUInstallDirs)
 # Submodules
 # ============================================================================
 
-list (PREPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules)
+list (PREPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/nael_utils/cmake-modules)
 
 add_subdirectory (nael_utils)
 
