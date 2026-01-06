@@ -12,7 +12,7 @@ find_package (Boost REQUIRED)
 # Targets configuration
 # ============================================================================
 
-configure_file (${CMAKE_SOURCE_DIR}/cmake-modules/nael_version.hh.in ${CMAKE_CURRENT_BINARY_DIR}/toy_cpp_version.hh)
+configure_file (${nael_utils_SOURCE_DIR}/cmake-modules/nael_version.hh.in ${CMAKE_CURRENT_BINARY_DIR}/toy_cpp_version.hh)
 
 add_library (lib_toy_cpp)
 

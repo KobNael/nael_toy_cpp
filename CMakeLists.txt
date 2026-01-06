@@ -27,7 +27,7 @@ include (GNUInstallDirs)
 # Submodules
 # ============================================================================
 
-list (PREPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake-modules)
+list (PREPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/nael_utils/cmake-modules)
 
 add_subdirectory (nael_utils)
 
@@ -56,12 +56,14 @@ set (CMAKE_CXX_EXTENSIONS OFF)
 set (CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set (data_base_path ${CMAKE_SOURCE_DIR}/compilation-databases/${CMAKE_BUILD_TYPE})
 file (MAKE_DIRECTORY "${data_base_path}")
-add_custom_target(
-    copy-compile-commands ALL
-    ${CMAKE_COMMAND} -E copy_if_different
-        ${CMAKE_BINARY_DIR}/compile_commands.json
-        ${data_base_path}/
-    )
+if (NOT MSVC)
+    add_custom_target(
+        copy-compile-commands ALL
+        ${CMAKE_COMMAND} -E copy_if_different
+            ${CMAKE_BINARY_DIR}/compile_commands.json
+            ${data_base_path}/
+        )
+endif()
 # ----------------------------------------------------------------------------
 # Default compilation flags
 # ----------------------------------------------------------------------------
