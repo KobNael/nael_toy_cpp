@@ -44,7 +44,7 @@ Tested on Ubuntu 24.04.1 LTS (native or through wsl2).
 1. Activate the virtual environnement
     > $ source path_to_ps_venv/bin/activate
 
-1. Install the requirements (conan, streamlit, tools for documentation)
+1. Install the Python requirements (conan)
     > $ pip3 install -r path_to_repo/requirements.txt
 
 1. Set up the conan profiles
