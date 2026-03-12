@@ -14,7 +14,7 @@ It should be something like `path_to_repo/builds/Linux/gcc/13/x86_64/(Debug|Rele
 
 ## Installation
 
-### Environnement
+### Environment
 
 Tested on Ubuntu 24.04.1 LTS (native or through wsl2).
 
@@ -38,10 +38,10 @@ Tested on Ubuntu 24.04.1 LTS (native or through wsl2).
 
 ### Before first compilation
 
-1. Create a new dedicated virtual environnement
+1. Create a new dedicated virtual environment
     > $ python -m venv ps_venv
 
-1. Activate the virtual environnement
+1. Activate the virtual environment
     > $ source path_to_ps_venv/bin/activate
 
 1. Install the Python requirements (conan)
