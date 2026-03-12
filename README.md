@@ -2,7 +2,7 @@
 
 This project is mainly used as a test of the following dependencies, but can also be used as a starting point for a new c++ project :
 
--  [Nael utils](https://github.com/KobNael/nael_utils) : a small C++ library with some usefull tools
+-  [Nael utils](https://github.com/KobNael/nael_utils) : a small C++ library with some useful tools
 -  [Nael Cpp Action](https://github.com/KobNael/nael_cpp_action) : a reusable github pipeline for full C++ CI process
 
 ## Notations
