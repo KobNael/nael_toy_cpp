@@ -10,7 +10,7 @@ This project is mainly used as a test of the following dependencies, but can als
 - `build_directory` corresponds to the build directory (automagically created by conan).
 It should be something like `path_to_repo/builds/Linux/gcc/13/x86_64/(Debug|Release)/`
 - `path_to_bin` corresponds to the path to the binary.
-It should be something like `path_to_repo/builds/Linux/gcc/13/x86_64/(Debug|Release)/src/app/ps_scheduling`
+It should be something like `path_to_repo/builds/Linux/gcc/13/x86_64/(Debug|Release)/src/app/toy_cpp`
 
 ## Installation
 
