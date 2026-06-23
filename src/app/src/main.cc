@@ -20,6 +20,7 @@ int processArgs(po::variables_map const &vm)
 	//input
 	if( vm.count("input-file") )
 	{
+        std::cerr << "claude is poop" << std::endl;
 		//Import dto
 	    dto::DtoContext dto_context;
 		INFOLOG << "Import " << vm["input-file"].as< std::string >() << std::endl;
